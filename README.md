@@ -1,5 +1,5 @@
 
-# Universo Cinematrofráfico
+# Universo Cinematográfico
 
 Quem nunca desejou ser digno de levantar o martelo do Thor? Ou nunca desejou dar uma volta no tapete mágico do Aladdin? Bom, chegou a sua hora! Nesse projeto simulamos um e-commerce no qual você pode adquirir os artigos dos filmes mais icônicos do cinema! 
 
