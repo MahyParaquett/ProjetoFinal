@@ -12,7 +12,7 @@ Siga nossos fundadores:
 [Mahyara Paraquett](https://github.com/MahyParaquett);
 [Rian Ferreira](https://github.com/Rian-Fernandes);
 [Felipe Ribeiro](https://github.com/philippusv);
-[Eduardo](https://github.com/eduardocs90);
+[Eduardo Carneiro](https://github.com/eduardocs90);
 [Lucas Latsch](https://github.com/LucasLatsch)
 
 
