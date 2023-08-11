@@ -11,6 +11,11 @@ Nele você encontrará três grandes categorias de produtos: Heróis, Disney e D
 
 Entre e confira!!
 
+Este é o fluxograma do menu usado nesse projeto:
+<div align="center">
+<img src="https://github.com/MahyParaquett/ProjetoFinal/blob/cda43854546315e3a4bfb6e9c8a951c90ecd6f53/Fluxograma%20Menu.png">
+ </div>
+
 🎮 As tecnologias usadas foram: portugol studio v2.7.5 e o draw.io
 
 ⚜️ Siga nossos fundadores:
