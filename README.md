@@ -1,14 +1,19 @@
+# ✨ Bem-Vindo(a) ao Universo Cinematográfico ✨
 
-# Universo Cinematográfico
+<div align="center">
+<img src="https://github.com/MahyParaquett/ProjetoFinal/blob/4d17fa274edcda90cbd52e7e8f91286844dbe1a0/logo.png">
+ </div>
+ 
+Quem nunca desejou ser digno de levantar o martelo do Thor? Ou nunca desejou dar uma volta no tapete mágico do Aladdin? Bom, chegou a sua hora!🫵 
 
-Quem nunca desejou ser digno de levantar o martelo do Thor? Ou nunca desejou dar uma volta no tapete mágico do Aladdin? Bom, chegou a sua hora! Nesse projeto simulamos um e-commerce no qual você pode adquirir os artigos dos filmes mais icônicos do cinema! 
+Nesse projeto simulamos um e-commerce no qual você pode adquirir os artigos dos filmes mais icônicos do cinema! 
+Nele você encontrará três grandes categorias de produtos: Heróis, Disney e Dreamwork.
 
+Entre e confira!!
 
-Nela você encontrará três grandes categorias de produtos: Heróis, Disney e Dreamwork. Entre e confira!!
+🎮 As tecnologias usadas foram: portugol studio v2.7.5 e o draw.io
 
-As tecnologias usadas foram: portugol studio v2.7.5 e o draw.io
-
-Siga nossos fundadores:
+⚜️ Siga nossos fundadores:
 [Mahyara Paraquett](https://github.com/MahyParaquett);
 [Rian Ferreira](https://github.com/Rian-Fernandes);
 [Felipe Ribeiro](https://github.com/philippusv);
