@@ -1,6 +1,10 @@
 
-# Universo Cinematográfico
+# Bem-Vindo(a) ao Universo Cinematográfico
 
+<div align="center">
+<img src="https://github.com/MahyParaquett/ProjetoFinal/blob/4d17fa274edcda90cbd52e7e8f91286844dbe1a0/logo.png">
+ </div>
+ 
 Quem nunca desejou ser digno de levantar o martelo do Thor? Ou nunca desejou dar uma volta no tapete mágico do Aladdin? Bom, chegou a sua hora! Nesse projeto simulamos um e-commerce no qual você pode adquirir os artigos dos filmes mais icônicos do cinema! 
 
 
