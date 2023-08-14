@@ -1,9 +1,12 @@
 programa {
 	inclua biblioteca Util --> u
 	inclua biblioteca Tipos --> t
+	inclua biblioteca Calendario --> c
 	const inteiro LINHA = 9, COLUNA = 3
 	
 	funcao inicio() {
+		inteiro dia = c.dia_mes_atual(), mes = c.mes_atual(), ano = c.ano_atual()
+		inteiro op2
 		real p=0.0
 		logico logado, loop = verdadeiro
 		cadeia carrinho[LINHA][COLUNA]
@@ -15,25 +18,24 @@ programa {
 			{"Eduardocs", "54321"},
 			{"Lucasl", "42424"}}
 
-		se(nao loop){
-			opcaoLogin = 'N'
+		se(nao loop){      							// INSERIR LOGO
+			opcaoLogin = 'N'						// INSERIRIR LOGO
 		}
 		senao{
-			escreva("Deseja entrar na loja? (S/N): ")
+			escreva("Olá! Deseja entrar na loja? (S/N): ")
 			leia(opcaoLogin)
 			limpa()	
 		}
 		se(opcaoLogin == 'S' ou opcaoLogin == 's') {
-			//mostrar msg
-			escreva("\n\n")
-			escreva("Seja bem vindo a loja\n\n")
+			escreva("")
+			escreva("\n\nSeja bem vindo a loja\n\n")
 			cadeia usuario, senha
 			logado = falso
 			faca{
-				escreva("Informe o usuário: ")
+				escreva("Por favor, informe o seu nome de usuário: ")
 				leia(usuario)
 				limpa()
-				escreva("Informe a senha: ")
+				escreva("Agora informe a sua senha: ")
 				leia(senha)
 				limpa()
 				
@@ -46,18 +48,18 @@ programa {
 				
 				se(logado){
 					escreva("Login realizado com sucesso!\n")
-					escreva("Seja bem vindo ", usuario, "\n\n")
+					escreva("Seja bem vindo ", usuario, " escolha alguns dos nossos itens adquiridos através do multiverso! \n\n")
 					cadeia matrizEstoque[LINHA][COLUNA] = {{"Mjolnirr","2","150.99"},{"Anel do Poder","12","99.99"},{"Escudo de Vibranium","10","599.90"},{"Sapatos de Cristal","4","999.99"},{"Tapete","0","549.99"},{"Maca","1","19.90"},{"Par de Botas","2","49.90"},{"1 Dia de Spa","0","200.0"},{"Ovo de Dragao","20","1999.99"}}
 					cadeia teste = "n", opcao2 = "n", prod, quant, nome = "LucasL"
 					inteiro contador = 0, opcao=0, x=0
 					//contador=confere(matrizEstoque, contador) // Funcao que confere se ja tem item na matriz
 					carregando("Atenção!!!\nOs dados aqui cadastrados a seguir serão perdidos se o programa for fechado.\nCarregando.")
-					u.aguarde(1500)
+					u.aguarde(1000)
 					limpa()
 					contador=confere(carrinho, contador)
 					escreva("\n")
 							faca{  
-								u.aguarde(2000)
+								u.aguarde(500)
 								Menu(usuario) // Imprimindo o menu
 								leia(opcao) // Lendo a opçcao do menu
 								limpa()
@@ -79,16 +81,50 @@ programa {
 										contador=excluir(carrinho, contador, prod) // Funcao para excluir o produto desejado
 										pare
 									caso 3: 
-										imprimeCarrinho(carrinho, contador) // trocar para carrinho
+										imprimeCarrinho(carrinho, matrizEstoque, contador) // trocar para carrinho
 										pare	
 									caso 4: // Confirmar compra
 										u.aguarde(200)
-										imprimeCarrinho(carrinho, contador)
-										confirmaCompra(carrinho, contador)
+										imprimeCarrinho(carrinho, matrizEstoque, contador)
+										confirmaCompra(carrinho, contador, dia, mes, ano)
 										pare
 									caso 5: // Lista todos os produtos que tem a quantidade diferente de 0
 										u.aguarde(200)
-										imprimeComEstoque(matrizEstoque) // Chamando funcçao
+										//imprimeComEstoque(matrizEstoque) // Chamando funcçao
+										faca{
+											escreva("Categorias:\n1-Marvel\n2-Disney\n3-Dreamwork\n4-Listar Produtos\n5-Voltar\nOpção desejada: ")
+											leia(op2)
+											escolha(op2){
+												caso 1:
+													limpa()
+													escreva("⚡ Martelo do Thor: \nJá pensou em adquirir o martelo mais poderoso do universo Marvel? Aqui você pode!\n\n")
+													escreva("Ω Anel Lanterna verde: \nSe você é do time DC esse é o seu produto, faça parte do esquadrão intergaláctico do Lanterna verde.\n\n")
+													escreva("✪ Escudo capitão América: \nSe você for do time Marvel, você não pode ficar sem esse exclusivo ítem, nunca se sabe quando você vai precisar!\n\n")
+													pare
+												caso 2: 
+													limpa()
+													escreva("✭ Sapatos de cristal da Cinderela: \nEm uma noite mágica, a melhor parte com certeza são os sapatos únicos de cristal, adquira já! Atenção em caso de perda de um dos pares não garantimos um príncipe te devolvendo o sapato.\n\n")
+													escreva("▓‍Tapete mágico Alladin: \nDeseja conhecer um mundo ideal? Compre agora o tapete mágico e nunca mais pegue engarrafamento!\n\n")
+													escreva("❦ Maça envenenada branca de neve: \nEsse produto é de matar! Criado por uma rainha má mas se usado com sabedoria você pode descolar um príncipe. Compre já!\n\n")
+													pare
+												caso 3: 
+													limpa()
+													escreva("₲ Botas gato de botas: \nBotas estilosas e marcantes, podem não te garantir um olhar convincente mas com certeza te deixará único!\n\n")
+													escreva("☾ Dia de SPA no pantano: \nAqui você pode adquirir uma experiência única! Um dia de SPA no pantano do shrek, com direito a banho de lama e comidas típicas do local.\n\n")
+													escreva("○ Ovo de dragão surpresa: \nNão garantimos que o seu ovo surpresa seja um dragão, mas com certeza você tem o elemento surpresa.\n\n")
+													pare
+												caso 4:
+													limpa()
+													imprimeComEstoque(matrizEstoque)
+													pare
+												caso 5:
+													limpa()
+													pare
+												caso contrario:
+													escreva("Opção invalida, tente novamente!\n")
+													pare
+											}
+										}enquanto(op2!=5 )
 										pare
 									caso 6:// Criando a opçao de saida do programam com mensagem de confirmaçao
 										u.aguarde(200)
@@ -111,7 +147,7 @@ programa {
 							}enquanto(opcao != 6 e teste != "S")
 						
 				}senao{
-					escreva("Usuário ou senha incorretos.\n")
+					escreva("Parece que seu usuário ou senha incorretos.\n")
 					logado = verdadeiro
 				}
 			}enquanto(logado)
@@ -123,18 +159,19 @@ programa {
 		}
 	
 	}
-	funcao confirmaCompra(cadeia matriz[][], inteiro contador){
+	funcao confirmaCompra(cadeia matriz[][], inteiro contador, inteiro dia, inteiro mes, inteiro ano){ 
 		real soma = 0.0
 		para(inteiro i=0; i<LINHA-contador; i++){
 				soma += t.cadeia_para_real(matriz[i][2])		
 		}
-		carregando("Gerando nota fiscal")
+		carregando("Gerando nota fiscal ")
+		escreva(dia, "/", mes, "/", ano, "/", "\n")
 		escreva("Valor total da compra: ", soma, "\n")
 		carregando("Processando")
 		carregando("Processando")
 		escreva("Compra confirmada com sucesso, tenha um bom dia!!")
 	}
-	funcao imprimeCarrinho(cadeia carrinho[][], inteiro contador){ // Imprime somente os produtos com estoque
+	funcao imprimeCarrinho(cadeia carrinho[][], cadeia estoque[][], inteiro contador){ // Imprime somente os produtos com estoque
 		inteiro x=0
 		real p=0.0
 		se(contador == LINHA){    							///////// COMPLEMENTAR 
@@ -146,12 +183,12 @@ programa {
 		//se(contador > 0){
 			para(inteiro i=0; i<=LINHA-contador; i++){
 				se(carrinho[i][1] != "0" e carrinho[i][1] != ""){
-					p=preco(carrinho, i)
+					//p=preco(carrinho, i)
 					//p = (t.cadeia_para_real(matriz[i][1]))*(t.cadeia_para_real(matriz[i][2]))
 					se(carrinho[i][0] == "Anel do Poder"){
-						escreva(carrinho[i][0], "\t\t", carrinho[i][1], "\t", p, "\t\n") // Tirar duvida
+						escreva(carrinho[i][0], "\t\t", carrinho[i][1], "\t", estoque[i+1][2], "\t\n") // Tirar duvida
 					}senao{
-						escreva(carrinho[i][0], "\t", carrinho[i][1], "\t", p, "\t\n")
+						escreva(carrinho[i][0], "\t", carrinho[i][1], "\t", estoque[i][2], "\t\n")
 					}
 				}
 			}
@@ -182,6 +219,7 @@ programa {
 			escreva(matriz[i][0], " ", matriz[i][1], "\n") // Tirar duvida
 			}
 		}
+		escreva("------------------\n")
 		u.aguarde(1000)
 	}
 	funcao inteiro confere(cadeia matriz[][], inteiro contador){ // Funcao pra conferir o estoque
@@ -241,7 +279,7 @@ programa {
 		limpa()
 		para(inteiro i=0; i<LINHA; i++){
 			se(carrinho[LINHA-contador][0] == estoque[i][0] ){
-				carrinho[LINHA-contador][2] = estoque[i][2]
+				carrinho[LINHA-contador][2] = estoque[i][2] 
 			}
 			
 		}
@@ -259,7 +297,7 @@ programa {
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 5533; 
+ * @POSICAO-CURSOR = 1343; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
