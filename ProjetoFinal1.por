@@ -292,11 +292,9 @@ programa {
 				se(carrinho[i][1] != "0" e carrinho[i][1] != ""){
 					//p=preco(carrinho, i)
 					//p = (t.cadeia_para_real(matriz[i][1]))*(t.cadeia_para_real(matriz[i][2]))
-					se(carrinho[i][0] == "Anel do Poder"){
-						escreva(carrinho[i][0], "\t\t", carrinho[i][1], "\t", estoque[i][2], "\t\n") // Tirar duvida
-					}senao{
-						escreva(carrinho[i][0], "\t", carrinho[i][1], "\t", estoque[i][2], "\t\n")
-					}
+					// Tirar duvida
+					escreva(carrinho[i][0], "\t", carrinho[i][1], "\t", carrinho[i][2], "\t\n")
+					
 				}
 			}
 			u.aguarde(1000)
@@ -402,9 +400,9 @@ programa {
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3685; 
+ * @POSICAO-CURSOR = 11007; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {carrinho, 378, 40, 8}-{estoque, 378, 61, 7}-{contador, 378, 82, 8}-{quantidade, 379, 7, 10}-{p, 379, 23, 1}-{valor, 379, 32, 5};
+ * @SIMBOLOS-INSPECIONADOS = {carrinho, 281, 31, 8}-{estoque, 281, 52, 7};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
