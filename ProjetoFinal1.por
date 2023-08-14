@@ -138,6 +138,7 @@ programa {
 			cadeia usuario, senha
 			logado = falso
 			faca{
+				logado=falso
 				escreva("Por favor, informe o seu nome de usuário: ")
 				leia(usuario)
 				limpa()
@@ -400,9 +401,9 @@ programa {
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 11007; 
+ * @POSICAO-CURSOR = 9685; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {carrinho, 281, 31, 8}-{estoque, 281, 52, 7};
+ * @SIMBOLOS-INSPECIONADOS = {logado, 12, 9, 6}-{carrinho, 282, 31, 8}-{estoque, 282, 52, 7};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
