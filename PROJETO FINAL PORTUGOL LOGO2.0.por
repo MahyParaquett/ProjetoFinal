@@ -1,6 +1,3 @@
-/*acho que da pra fazer pulando uma linha dentro do escreva
-e colocando a mesma quantidade de #*/
-// PROJETO FINAL LOGO
 programa
 {
 	inclua biblioteca Util
@@ -120,7 +117,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1434; 
+ * @POSICAO-CURSOR = 0; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
