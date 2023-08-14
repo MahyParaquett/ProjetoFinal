@@ -22,7 +22,7 @@ programa {
 			opcaoLogin = 'N'						// INSERIRIR LOGO
 		}
 		senao{
-			escreva("Olá! Deseja entrar na loja? (S/N): ")
+			escreva("Deseja entrar na loja? (S/N): ")
 			leia(opcaoLogin)
 			limpa()	
 		}
@@ -32,10 +32,10 @@ programa {
 			cadeia usuario, senha
 			logado = falso
 			faca{
-				escreva("Por favor, informe o seu nome de usuário: ")
+				escreva("Informe o usuário: ")
 				leia(usuario)
 				limpa()
-				escreva("Agora informe a sua senha: ")
+				escreva("Informe a senha: ")
 				leia(senha)
 				limpa()
 				
@@ -48,7 +48,7 @@ programa {
 				
 				se(logado){
 					escreva("Login realizado com sucesso!\n")
-					escreva("Seja bem vindo ", usuario, " escolha alguns dos nossos itens adquiridos através do multiverso! \n\n")
+					escreva("Seja bem vindo ", usuario, "\n\n")
 					cadeia matrizEstoque[LINHA][COLUNA] = {{"Mjolnirr","2","150.99"},{"Anel do Poder","12","99.99"},{"Escudo de Vibranium","10","599.90"},{"Sapatos de Cristal","4","999.99"},{"Tapete","0","549.99"},{"Maca","1","19.90"},{"Par de Botas","2","49.90"},{"1 Dia de Spa","0","200.0"},{"Ovo de Dragao","20","1999.99"}}
 					cadeia teste = "n", opcao2 = "n", prod, quant, nome = "LucasL"
 					inteiro contador = 0, opcao=0, x=0
@@ -147,7 +147,7 @@ programa {
 							}enquanto(opcao != 6 e teste != "S")
 						
 				}senao{
-					escreva("Parece que seu usuário ou senha incorretos.\n")
+					escreva("Usuário ou senha incorretos.\n")
 					logado = verdadeiro
 				}
 			}enquanto(logado)
@@ -292,13 +292,15 @@ programa {
 	
 }
 
+
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1343; 
- * @PONTOS-DE-PARADA = ;
+ * @POSICAO-CURSOR = 7928; 
+ * @DOBRAMENTO-CODIGO = [205, 213, 224, 235, 259, 267];
+ * @PONTOS-DE-PARADA = 84, 75;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
